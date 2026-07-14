@@ -1,0 +1,113 @@
+{
+  "$schema": "https://tokens.io/schema/dtcg",
+  "$description": "Geez Design Tokens — machine-readable source of truth. Canonical values only. For the full type scale and Spoof font base64, see geez-brand-repository.html and the Figma source (file key jK2ao1ub8VTVlKMOCwDiyG). Never introduce a value not present here.",
+  "$meta": {
+    "system": "Geez",
+    "version": "3.0",
+    "supersedes": "Brand Repository v2.0 (assets) + June 2026 laws",
+    "owner": "Geez LLC · Delaware · geez.network",
+    "locked": true
+  },
+
+  "color": {
+    "$type": "color",
+    "green": {
+      "$value": "#AEFFC8",
+      "$description": "Geez Green. Brand identity, highlights, success. LIGHT color — never place white or light text on it. Use black text.",
+      "role": "brand.primary"
+    },
+    "magenta": {
+      "$value": "#DA0063",
+      "$description": "Magenta. Primary actions, CTAs, links. DARK color — use white text on it.",
+      "role": "brand.accent"
+    },
+    "black": {
+      "$value": "#000000",
+      "$description": "Primary text, dark surfaces.",
+      "role": "text.primary"
+    },
+    "white": {
+      "$value": "#FFFFFF",
+      "$description": "Main backgrounds.",
+      "role": "background.primary"
+    },
+    "$rule": "FOUR COLORS ONLY. No new color values, ever. No gray scale — depth is achieved with the four colors and opacity."
+  },
+
+  "motion": {
+    "duration": {
+      "$type": "duration",
+      "heartbeat": {
+        "$value": "936ms",
+        "$description": "The Geez heartbeat. ALL screen transitions use this duration. Non-negotiable."
+      }
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "heartbeat": {
+        "$value": [0.16, 1, 0.3, 1],
+        "$description": "cubic-bezier(0.16, 1, 0.3, 1). Paired with the 936ms duration on every transition."
+      }
+    }
+  },
+
+  "space": {
+    "$type": "dimension",
+    "base": {
+      "$value": "4px",
+      "$description": "Base spacing unit. All spacing is a multiple of 4px."
+    },
+    "pad": {
+      "$value": "64px",
+      "$description": "Standard Atelier / screen padding."
+    },
+    "pad-sm": {
+      "$value": "40px",
+      "$description": "Compact padding."
+    }
+  },
+
+  "shape": {
+    "$type": "dimension",
+    "stroke": {
+      "$value": "4.31px",
+      "$description": "Canonical stroke width. Exact — do not round."
+    },
+    "radius": {
+      "$value": "8.62px",
+      "$description": "Canonical corner radius. Exact — do not round."
+    },
+    "pill-stroke": {
+      "$value": "1.751px",
+      "$description": "Pill stroke width. EXACT — never rounded to 2px. Rounding = conformance violation."
+    }
+  },
+
+  "typography": {
+    "$type": "typography",
+    "family": {
+      "$value": "Spoof",
+      "$description": "Spoof is the ONLY permitted typeface. 6 weights, base64 woff2, zero external font dependencies. Font base64 lives in geez-brand-repository.html as @font-face blocks. Extraction note: match data:font/truetype MIME type (woff2 query returns zero results even though fonts are present)."
+    },
+    "weights": {
+      "$value": 6,
+      "$description": "Six locked Spoof weights. Exact numeric weights + full type scale (display / heading / body / label / caption) are defined in geez-brand-repository.html and the Figma source of truth (jK2ao1ub8VTVlKMOCwDiyG). Body copy default: Spoof Light 300."
+    },
+    "scale": {
+      "$description": "Hierarchy only — px values live in the Brand Repository HTML + Figma.",
+      "display": "Hero moments only — full-screen empty states, onboarding.",
+      "heading": "Section titles, screen headers.",
+      "body": "All reading content. Default weight 300 (Light).",
+      "label": "Buttons, nav, badges, form labels. Uppercase at small sizes.",
+      "caption": "Metadata, timestamps, helper text."
+    }
+  },
+
+  "border": {
+    "atelier-top": {
+      "$type": "border",
+      "$value": { "color": "#AEFFC8", "width": "6px", "style": "solid" },
+      "$description": "Atelier artifact standard: 6px Geez Green top border on white background."
+    }
+  }
+}
